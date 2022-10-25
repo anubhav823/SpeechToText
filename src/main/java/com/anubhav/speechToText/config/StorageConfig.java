@@ -24,7 +24,8 @@ public class StorageConfig {
 	@Bean
 	AmazonS3 generateS3Client() {
 		AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-		return AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(credentials))
-				.withRegion(Regions.AP_SOUTH_1).build();
+		return AmazonS3ClientBuilder.standard()
+				.withCredentials(new AWSStaticCredentialsProvider(credentials))
+				.withRegion(region).build();
 	}
 }
