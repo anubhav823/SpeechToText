@@ -14,8 +14,8 @@ import com.amazonaws.services.s3.AmazonS3;
 @Service
 public class StorageService {
 
-//	@Value("{application.bucket.name}")
-	private String bucketName="anubhavs3speech2text";
+	@Value("{application.bucket.name}")
+	private String bucketName;
 	
 	@Autowired
 	private AmazonS3 s3Client;
